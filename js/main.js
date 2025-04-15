@@ -1,3 +1,5 @@
+/****REGISTRO USUARIOS */
+
 function setupRegistroButton() {
     const registroPage = document.getElementById('Registro')
     registroPage.addEventListener('click', ()=>{
@@ -83,7 +85,7 @@ function setupRegistroButton() {
 const registroPage = document.getElementById('Registro');
 registroPage.addEventListener('click', setupRegistroButton);
 
-
+/****INISIO DE SESION */
 
 function InisiarSesion(){
     const btnInicio = document.getElementById('btnInicio');
@@ -98,8 +100,7 @@ function InisiarSesion(){
                     usuario.id === User && usuario.contraseña === Pass
                 ));
                 if (correct){
-                    document.getElementById('page').innerHTML=`<h1>¡Bienvenido!</h1>
-                        <p>Has iniciado sesión exitosamente.</p>`
+                    window.location.href = '/Dashboard.html'
                 }
                 else{
                     alert('Error: Credenciales incorrectas.');
@@ -117,7 +118,7 @@ function InisiarSesion(){
 const iniciobtn = document.getElementById('btnInicio')
 iniciobtn.addEventListener('click', InisiarSesion)
 
-
+/****BOTON REUTILIZABLE */
 class myButton extends HTMLElement {
     
     constructor(){
