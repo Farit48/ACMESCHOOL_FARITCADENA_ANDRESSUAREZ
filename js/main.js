@@ -101,6 +101,7 @@ function InisiarSesion(){
                 ));
                 if (correct){
                     window.location.href = '/Dashboard.html'
+                    localStorage.setItem("usuarioactivo", JSON.stringify(correct));
                 }
                 else{
                     alert('Error: Credenciales incorrectas.');
@@ -126,14 +127,17 @@ class myButton extends HTMLElement {
         const shadow = this.attachShadow({mode:'open'})
         shadow.innerHTML = `
         <style>
-          div {
-            background: #f0f0f0;
+        .botonPersonalizado {
+            background:rgb(255, 255, 255);
             padding: 10px;
-            border-radius: 8px;
+            color:rgb(24, 63, 12);
+            border-radius: 30px;
+            aling-items:center;
+            margin-top:5px;
             font-family: sans-serif;
           }
         </style>
-        <button>
+        <button class="botonPersonalizado">
           Dame Click
         </button>
       `;

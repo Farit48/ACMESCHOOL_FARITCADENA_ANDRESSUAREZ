@@ -1,7 +1,52 @@
-@media (max-width: 480px){    
+:root{
+    --fuente:"Nunito", sans-serif;
+}
+
 body {
+    font-family: var(--fuente);
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 219, 255);
+    text-align: center;
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page{
+    height: 100%;
+    width: 50%;
+}
+header h1 {
+    font-size: 40px;
+}
+main{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border:3px solid rgba(8, 8, 8, 0.5);
+    border-radius: 20px;
+    background-color: rgb(110, 226, 74);
+}
+.formInicio {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@media (max-width: 480px){    
+:root{
+    --fuente:"Nunito", sans-serif;
+}
+
+body {
+    font-family: var(--fuente);
+    margin: 0;
+    background-color: rgb(231, 203, 255);
     text-align: center;
     padding: 40px;
     height: 100vh;
@@ -12,12 +57,16 @@ body {
 
 .page{
     height: 100%;
+    width:100%;
 }
 main{
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border:3px solid rgba(248, 239, 239, 50%);
+    border-radius: 20px;
+    background-color: rgb(110, 226, 74);
 }
 .formInicio {
     height: 200px;
@@ -25,10 +74,16 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+
+}
+input{
+    border-radius: 30px;
+    border: none;
 }
 .btnInicio{
-    background-color: blue;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+    background:rgb(24, 63, 12);
+    padding: 10px;
+    color:white;
+    border-radius: 40px;
 }
