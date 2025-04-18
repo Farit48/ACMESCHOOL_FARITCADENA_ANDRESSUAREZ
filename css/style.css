@@ -1,8 +1,10 @@
+/**ROOTS**/
+
 :root{
     --fuente:"Nunito", sans-serif;
 }
-
-body {
+/**GLOBALES**/
+.bodyIndex {
     font-family: var(--fuente);
     margin: 0;
     background-color: rgb(238, 219, 255);
@@ -15,6 +17,11 @@ body {
     align-items: center;
 }
 
+input{
+    border-radius: 30px;
+    border: none;
+}
+/**INDEX PAGE**/
 .page{
     height: 100%;
     width: 50%;
@@ -43,7 +50,7 @@ main{
     --fuente:"Nunito", sans-serif;
 }
 
-body {
+.bodyIndex {
     font-family: var(--fuente);
     margin: 0;
     background-color: rgb(231, 203, 255);
@@ -75,15 +82,69 @@ main{
     justify-content: space-evenly;
 }
 
-
-}
-input{
-    border-radius: 30px;
-    border: none;
-}
 .btnInicio{
     background:rgb(24, 63, 12);
     padding: 10px;
     color:white;
     border-radius: 40px;
 }
+
+
+}
+/**DASHBOARD PAGE**/
+.contenido-dinamico{
+    opacity: 0;
+    font-size: 30px;
+    border-radius: 30px;
+    width: 80%;
+    background-color: rgb(24, 63, 12);
+    animation: mensajeBienvenida 4s linear 0.2s forwards;
+}
+
+@keyframes mensajeBienvenida {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+.HeaderDash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.Settings{
+    text-align: center;
+    background-color: blue;
+    width: 100px;
+    height: 30px;
+    transition: all 1s ease;
+    color: white;
+    line-height: 30px;
+}
+.Settings:hover{
+    width: 50%;
+    height: 100px;
+    transition: all 1s ease;
+}
+#barOpciones {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    transition: opacity 0.3s ease;
+  }
